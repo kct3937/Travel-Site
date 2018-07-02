@@ -9,8 +9,7 @@ fs.writeFile(__dirname + '/index.html','<h1>HTML is great</h1>',function(error){
     }
 });
 
-// var myPhotoUrl = 'https://github.com/LearnWebCode/welcome-to-git/blob/master/images/dog.jpg?raw=true';
-// https://github.com/LearnWebCode/welcome-to-git/blob/master/images/dog.jpg?raw=true
+
 var myPhotoUrl = 'https://raw.githubusercontent.com/LearnWebCode/welcome-to-git/master/images/dog.jpg';
 https.get(myPhotoUrl,function(response) {
     response.pipe(fs.createWriteStream(__dirname + '/mydog.jpg'));
